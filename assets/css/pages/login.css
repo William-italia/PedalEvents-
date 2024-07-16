@@ -1,0 +1,55 @@
+.forget {
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    text-decoration: underline;
+    display: block;
+}
+
+.btns-container-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.container-banner-login {
+    position: relative;
+    width: 50%;
+}
+
+.container-banner-login img {
+    position: absolute;
+    width: 1120px;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.container-form-login {
+    background: linear-gradient(to right, #003B7A, #006CE0);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    font-size: 20px;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-login {
+    width: 40%;
+}
+
+.form-login h1{
+    font-size: 48px;
+    font-family: "Russo One", sans-serif;
+}
+
+.form-login h3{
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+}
+

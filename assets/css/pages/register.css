@@ -1,0 +1,52 @@
+.register {
+    margin-bottom: 2rem;
+}
+
+.container-banner-register {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.container-banner-register img {
+    z-index: -1;
+}
+
+.container-form-register {
+    background: linear-gradient(to right, #003B7A, #006CE0);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    font-size: 20px;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-register {
+    width: 40%;
+}
+
+.titles-register{
+    text-align: center;
+    margin-bottom: 2.25rem;
+}
+
+.titles-register h1 {
+    margin-bottom: 3.37rem;
+}
+
+.form-register h1{
+    font-size: 48px;
+    font-family: "Russo One", sans-serif;
+}
+
+.form-register h3{
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,7 @@
+@import 'base/reset.css';
+@import 'components/buttons.css';
+@import 'components/forms.css';
+@import 'components/utilitarios.css';
+@import 'pages/login.css';
+@import 'pages/register.css';
+@import 'pages/forget.css';
