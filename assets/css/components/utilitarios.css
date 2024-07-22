@@ -6,3 +6,7 @@
 .global-container {
     display: flex;
 }
+
+.none {
+    display: none;
+}

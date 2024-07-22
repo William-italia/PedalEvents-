@@ -24,7 +24,12 @@ footer, header, hgroup, menu, nav, section {
 }
 
 ol, ul {
+    text-decoration: none;
+}
+
+li {
     list-style: none;
+    margin: 0;
 }
 
 body {
@@ -32,14 +37,10 @@ body {
     font-family: 'Roboto', sans-serif; 
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 a {
     text-decoration: none;
     color: #fff;
     display: block;
+    margin: 0;
+    padding: 0;
 }
