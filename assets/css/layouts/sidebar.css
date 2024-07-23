@@ -10,6 +10,7 @@
     padding: 0 1.8rem;
     color: #fff;
     z-index: 200;
+    transition: all .5s;
 }
 
 .sidebar, .sidebar.close {
