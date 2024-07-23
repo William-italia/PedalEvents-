@@ -18,14 +18,14 @@
 </head>
 
 <body>
-    <div class="sidebar close">
-        <i class="fa-solid fa-arrow-left arrow-left" style="display: none;"></i>
-        <i class="fa-solid fa-arrow-right arrow-right"></i>
+    <div class="sidebar">
+        <i class="fa-solid fa-arrow-left arrow-left"></i>
+        <i class="fa-solid fa-arrow-right arrow-right" style="display: none;"></i>
         <h1><span class="blue">Pedal</span> Events</h1>
         <div class="icons-box">
             <ul>
-                <li> <a href="#"><i class="fa-solid fa-house"></i><span>Página Inicial</span></a> </li>
-                <li> <a class="select" href="#"><i class="fa-solid fa-flag"></i><span>Eventos</span></a> </li>
+                <li> <a class="select" href="#"><i class="fa-solid fa-house"></i><span class="select">Página
+                            Inicial</span></a> </li>
                 <li> <a href="#"><i class="fa-solid fa-user-group"></i><span>Procure outros ciclistas</span></a>
                 </li>
                 <li> <a href="#"><i class="fa-solid fa-comments"></i><span>Conversas</span></a> </li>
@@ -45,6 +45,41 @@
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
+
+    <div class="box-search-friends">
+        <h2>Busque outros ciclistas</h2>
+        <input class="search-f" type="text" placeholder="pesquisar">
+        <div class="peoples">
+            <div class="person">
+                <div class="person-img">
+                    <img src="./assets/img/person-img.png" alt="">
+                </div>
+                <div class="person-info">
+                    <p>Williamita_dev</p>
+                    <p>William Itália</p>
+                </div>
+            </div>
+            <div class="person">
+                <div class="person-img">
+                    <img src="./assets/img/Ellipse 120.png" alt="">
+                </div>
+                <div class="person-info">
+                    <p>mongatech</p>
+                    <p>Mongatech Info</p>
+                </div>
+            </div>
+            <div class="person">
+                <div class="person-img">
+                    <img src="./assets/img/Ellipse 123.png" alt="">
+                </div>
+                <div class="person-info">
+                    <p>chart_3dprint</p>
+                    <p>Chart</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="global-container">
         <div class="box-events">
@@ -257,12 +292,14 @@
         const sidebar = document.querySelector('.sidebar');
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
+        const boxSearchFriends = document.querySelector('.box-search-friends');
 
         arrowRight.addEventListener('click', function () {
             sidebar.classList.remove('close');
             sidebar.classList.add('open');
             arrowRight.style.display = 'none'; /* Esconde a seta direita */
             arrowLeft.style.display = 'inline-block'; /* Mostra a seta esquerda */
+            boxSearchFriends.style.left = '267px'; /* Ajusta a posição quando a sidebar está aberta */
         });
 
         arrowLeft.addEventListener('click', function () {
@@ -270,8 +307,10 @@
             sidebar.classList.add('close');
             arrowLeft.style.display = 'none'; /* Esconde a seta esquerda */
             arrowRight.style.display = 'inline-block'; /* Mostra a seta direita */
+            boxSearchFriends.style.left = '70px'; /* Ajusta a posição quando a sidebar está fechada */
         });
     });
+
 </script>
 
 

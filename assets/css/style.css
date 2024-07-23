@@ -3,6 +3,7 @@
 @import 'components/forms.css';
 @import 'components/utilitarios.css';
 @import 'layouts/sidebar.css';
+@import 'layouts/search-friends.css';
 @import 'pages/login.css';
 @import 'pages/register.css';
 @import 'pages/forget.css';

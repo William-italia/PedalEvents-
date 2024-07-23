@@ -12,6 +12,10 @@
     z-index: 200;
 }
 
+.sidebar, .sidebar.close {
+    /* display: none; */
+}
+
 .arrow-left {
     font-size: 1.2rem;
     position: absolute;
@@ -46,7 +50,7 @@
 .icons-box li {
     display: flex;
     align-items: center;
-    margin: 1.4rem 0;
+    margin: 3rem 0;
 }
 
 .icons-box .perfil {
@@ -107,6 +111,10 @@
 }
 
 
+.sidebar.close .icons-box li  {
+    margin: 2rem 0;
+}
+
 .sidebar.close .icons-box li a {
     color: #D0D0D0;
 }
@@ -114,7 +122,10 @@
     color: #fff;
 }
 
-.sidebar.close .icons-box li a.select {
+.sidebar .icons-box ul li > a.select {
+    color: #fff;
+}
+.sidebar.close .icons-box ul li > a.select {
     color: #fff;
 }
 
@@ -124,4 +135,8 @@
 
 .arrow-left {
     display: none; /* Inicialmente esconde a seta esquerda */
+}
+
+.select {
+    color: #fff !important;
 }
