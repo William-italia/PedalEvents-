@@ -18,15 +18,16 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <i class="fa-solid fa-arrow-left arrow-left"></i>
-        <i class="fa-solid fa-arrow-right arrow-right" style="display: none;"></i>
+    <div class="sidebar close">
+        <i class="fa-solid fa-arrow-left arrow-left" style="display: none;"></i>
+        <i class="fa-solid fa-arrow-right arrow-right"></i>
         <h1><span class="blue">Pedal</span> Events</h1>
         <div class="icons-box">
             <ul>
                 <li> <a class="select" href="#"><i class="fa-solid fa-house"></i><span class="select">Página
                             Inicial</span></a> </li>
-                <li> <a href="#"><i class="fa-solid fa-user-group"></i><span>Procure outros ciclistas</span></a>
+                <li> <a id="search-cyclists" href="#"><i class="fa-solid fa-user-group"></i><span>Procure outros
+                            ciclistas</span></a>
                 </li>
                 <li> <a href="#"><i class="fa-solid fa-comments"></i><span>Conversas</span></a> </li>
                 <li> <a href="#"><i class="fa-solid fa-envelope"></i><span>Notificações</span></a> </li>
@@ -46,7 +47,7 @@
         </form>
     </div>
 
-    <div class="box-search-friends">
+    <div class="box-search-friends" style="display: none;">
         <h2>Busque outros ciclistas</h2>
         <input class="search-f" type="text" placeholder="pesquisar">
         <div class="peoples">
@@ -79,7 +80,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="global-container">
         <div class="box-events">
@@ -260,28 +260,7 @@
                     </div>
                     <button class="btn btn-card">Mais Detalhes</button>
                 </div>
-                <div class="card">
-                    <div class="img-card">
-                        <img class="card-img" src="./assets/img/event.png" alt="">
-                    </div>
-                    <span class="tag">Inscrições abertas</span>
-                    <h1 class="title-event">Desafio nas montanhas</h1>
-                    <div class="infos">
-                        <div class="icon-info">
-                            <i class="fa-solid fa-user"></i>
-                            <p>Clube de ciclistas de Mongaguá</p>
-                        </div>
-                        <div class="icon-info">
-                            <i class="fa-solid fa-calendar-days"></i>
-                            <p>20/07/2024</p>
-                        </div>
-                        <div class="icon-info">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p>Mongaguá, SP</p>
-                        </div>
-                    </div>
-                    <button class="btn btn-card">Mais Detalhes</button>
-                </div>
+                <!-- ... Repita as outras divs .card conforme necessário ... -->
             </div>
         </div>
     </div>
@@ -293,6 +272,7 @@
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const boxSearchFriends = document.querySelector('.box-search-friends');
+        const searchCyclists = document.getElementById('search-cyclists');
 
         arrowRight.addEventListener('click', function () {
             sidebar.classList.remove('close');
@@ -309,9 +289,43 @@
             arrowRight.style.display = 'inline-block'; /* Mostra a seta direita */
             boxSearchFriends.style.left = '70px'; /* Ajusta a posição quando a sidebar está fechada */
         });
+
+        searchCyclists.addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            if (boxSearchFriends.style.display === 'none' || boxSearchFriends.style.display === '') {
+                boxSearchFriends.style.display = 'block';
+            } else {
+                boxSearchFriends.style.display = 'none';
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebarItems = document.querySelectorAll('.icons-box ul li a');
+        const boxSearchFriends = document.querySelector('.box-search-friends');
+
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Remove a classe 'select' de todos os itens
+                sidebarItems.forEach(el => el.classList.remove('select'));
+
+                // Adiciona a classe 'select' ao item clicado
+                this.classList.add('select');
+
+                // Verifica se o item clicado é o 'Procure outros ciclistas'
+                if (this.id === 'search-cyclists') {
+                    // Mostra o box-search-friends
+                    boxSearchFriends.style.display = 'block';
+                } else {
+                    // Esconde o box-search-friends
+                    boxSearchFriends.style.display = 'none';
+                }
+            });
+        });
     });
 
 </script>
-
 
 </html>
