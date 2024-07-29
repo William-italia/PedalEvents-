@@ -8,7 +8,7 @@
     /* left: 70px;  */ /* sidebar .close*/
     left: 266px;
     transition: left 0.3s ease; /* Adicione transição para suavizar o movimento */
-    /* display: none; */
+    display: none;
 }
 
 .box-search-friends h2 {
