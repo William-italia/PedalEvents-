@@ -135,7 +135,7 @@
 }
 
 .arrow-left {
-    display: none; /* Inicialmente esconde a seta esquerda */
+    display: none; 
 }
 
 .select {

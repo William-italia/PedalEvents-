@@ -5,8 +5,8 @@
     color: #fff;
     padding: 1rem;
     top: 0;
-    /* left: 70px;  */ /* sidebar .close*/
-    left: 266px;
+    left: 70px;   /* sidebar .close*/
+    /* left: 266px; */
     transition: left 0.3s ease; /* Adicione transição para suavizar o movimento */
     /* display: none; */
 }
