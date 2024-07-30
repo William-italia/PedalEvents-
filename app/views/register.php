@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./assets/css/utilitarios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,8 +25,7 @@
                         <div id="step1" class="form-step">
                             <div class="group-box">
                                 <label for="fullName">Nome Completo:</label>
-                                <input class="input-border" type="text" id="fullName"
-                                    placeholder="Digite seu nome completo">
+                                <input class="input-border" type="text" id="fullName" placeholder="Digite seu nome completo">
                             </div>
                             <div class="group-box">
                                 <label for="cpf">CPF:</label>
@@ -44,24 +41,21 @@
                             </div>
                             <div class="btns-login">
                                 <button class="btn btn-blue" type="button" onclick="nextStep()">Próxima página</button>
-                                <a href="./login.html" class="btn ">Voltar</a>
+                                <a href="?page=login" class="btn ">Voltar</a>
                             </div>
                         </div>
                         <div id="step2" class="form-step" style="display: none;">
                             <div class="group-box">
                                 <label for="email">Email:</label>
-                                <input class="input-border" type="text" id="email"
-                                    placeholder="Digite seu melhor email">
+                                <input class="input-border" type="text" id="email" placeholder="Digite seu melhor email">
                             </div>
                             <div class="group-box">
                                 <label for="password">Senha:</label>
-                                <input class="input-border" type="password" id="password"
-                                    placeholder="Digite uma senha">
+                                <input class="input-border" type="password" id="password" placeholder="Digite uma senha">
                             </div>
                             <div class="group-box register">
                                 <label for="confirmPassword">Confirme sua senha:</label>
-                                <input class="input-border" type="password" id="confirmPassword"
-                                    placeholder="Confirme sua senha">
+                                <input class="input-border" type="password" id="confirmPassword" placeholder="Confirme sua senha">
                             </div>
                             <div class="btns-login">
                                 <button type="submit" class="btn btn-blue">Criar conta</button>

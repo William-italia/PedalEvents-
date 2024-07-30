@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./assets/css/utilitarios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,22 +21,22 @@
             <div class="form-forget">
                 <div class="titles-forget">
                     <h1><span class="blue">Pedal</span> Events</h1>
-                    <h3>Redefinindo senha!</h3>
+                    <h3>Redefina sua senha!</h3>
                 </div>
                 <div>
                     <form action="">
                         <div class="group-box">
-                            <label for="">Senha nova:</label>
+                            <label for="">Email:</label>
                             <input class="input-border" type="text" placeholder="Digite seu email">
                         </div>
                         <div class="group-box">
-                            <label for="">Confirme a senha:</label>
+                            <label for="">CPF:</label>
                             <input class="input-border" type="text" placeholder="Digite sua senha">
                         </div>
                     </form>
                     <div class="btns-forget">
-                        <a href="./login.html" class="btn btn-blue">Confirmar</a>
-                        <a href="./login.html" class="btn ">Voltar</a>
+                        <a href="?page=forget-pass" class="btn btn-blue">Proximo</a>
+                        <a href="?page=login" class="btn">Voltar</a>
                     </div>
                 </div>
             </div>

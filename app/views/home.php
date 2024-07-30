@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedal Events | Forget</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/utilitarios.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap"
-        rel="stylesheet">
-</head>
-
 <body>
+    <!-- sidebar -->
     <div class="sidebar close">
         <i class="fa-solid fa-arrow-left arrow-left" style="display: none;"></i>
         <i class="fa-solid fa-arrow-right arrow-right"></i>
@@ -32,14 +14,14 @@
                 <li> <a href="#"><i class="fa-solid fa-comments"></i><span>Conversas</span></a> </li>
                 <li> <a href="#"><i class="fa-solid fa-envelope"></i><span>Notificações</span></a> </li>
                 <li> <a href="#"><i class="fa-solid fa-circle-plus"></i><span>Criar</span></a> </li>
-                <li> <a class="perfil" href="#"><img class="perfil-img" src="./assets/img/perfil.png"
-                            alt=""><span>Perfil</span></a>
+                <li> <a class="perfil" href="#"><img class="perfil-img" src="./assets/img/perfil.png" alt=""><span>Perfil</span></a>
                 </li>
                 <li> <a href="#"><i class="fa-solid fa-gear"></i><span>Mais</span></a> </li>
             </ul>
         </div>
     </div>
 
+    <!-- caixa de pesquisa de eventos -->
     <div class="box-search">
         <form class="input-box-search">
             <input class="search" type="text" placeholder="Mongaguá">
@@ -47,9 +29,10 @@
         </form>
     </div>
 
+    <!-- caixa de pesquisa de usuarios -->
     <div class="box-search-friends" style="display: none;">
         <h2>Busque outros ciclistas</h2>
-        <input class="search-f" type="text" placeholder="pesquisar">
+        <input class="search-f" type="text" placeholder="pesquisar" type="reset">
         <div class="peoples">
             <div class="person">
                 <div class="person-img">
@@ -81,6 +64,7 @@
         </div>
     </div>
 
+    <!-- container dos eventos -->
     <div class="global-container">
         <div class="box-events">
             <div class="grid-events">
@@ -260,21 +244,20 @@
                     </div>
                     <button class="btn btn-card">Mais Detalhes</button>
                 </div>
-                <!-- ... Repita as outras divs .card conforme necessário ... -->
             </div>
         </div>
     </div>
 
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.querySelector('.sidebar');
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const boxSearchFriends = document.querySelector('.box-search-friends');
         const searchCyclists = document.getElementById('search-cyclists');
 
-        arrowRight.addEventListener('click', function () {
+        arrowRight.addEventListener('click', function() {
             sidebar.classList.remove('close');
             sidebar.classList.add('open');
             arrowRight.style.display = 'none'; /* Esconde a seta direita */
@@ -282,7 +265,7 @@
             boxSearchFriends.style.left = '266px'; /* Ajusta a posição quando a sidebar está aberta */
         });
 
-        arrowLeft.addEventListener('click', function () {
+        arrowLeft.addEventListener('click', function() {
             sidebar.classList.remove('open');
             sidebar.classList.add('close');
             arrowLeft.style.display = 'none'; /* Esconde a seta esquerda */
@@ -290,7 +273,7 @@
             boxSearchFriends.style.left = '70px'; /* Ajusta a posição quando a sidebar está fechada */
         });
 
-        searchCyclists.addEventListener('click', function (event) {
+        searchCyclists.addEventListener('click', function(event) {
             event.preventDefault(); // Impede o comportamento padrão do link
             if (boxSearchFriends.style.display === 'none' || boxSearchFriends.style.display === '') {
                 boxSearchFriends.style.display = 'block';
@@ -300,12 +283,12 @@
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const sidebarItems = document.querySelectorAll('.icons-box ul li a');
         const boxSearchFriends = document.querySelector('.box-search-friends');
 
         sidebarItems.forEach(item => {
-            item.addEventListener('click', function (event) {
+            item.addEventListener('click', function(event) {
                 event.preventDefault();
 
                 // Remove a classe 'select' de todos os itens
@@ -325,7 +308,6 @@
             });
         });
     });
-
 </script>
 
 </html>

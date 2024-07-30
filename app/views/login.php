@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./assets/css/utilitarios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -36,10 +34,10 @@
                             <input class="input-border pass" type="text" placeholder="Digite sua senha">
                         </div>
                     </form>
-                    <a href="./forget.html" class="forget">Esqueceu sua senha?</a>
+                    <a href="?page=forget" class="forget">Esqueceu sua senha?</a>
                     <div class="btns-container-login">
-                        <a href="" class="btn">Entrar</a>
-                        <a href="./register.html" class="btn btn-blue">Criar uma conta!</a>
+                        <a href="?page=home" class="btn">Entrar</a>
+                        <a href="?page=register" class="btn btn-blue">Criar uma conta!</a>
                     </div>
                 </div>
             </div>
